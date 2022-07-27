@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <nav>
+        <label>JC Tech</label>
+
+        <ul>
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#blogs">Blogs</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#services">Services</a></li>    
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1>Hide Navbar  On Scroll</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia dolorum explicabo assumenda cum quis. Ad, sequi commodi eum, quas nemo debitis quam, ipsa sint recusandae neque voluptas voluptatum amet! In qui pariatur, enim voluptas iusto reprehenderit totam id vitae, quae exercitationem consequuntur voluptatem repellat tempore obcaecati libero quaerat repudiandae laborum ratione nisi et numquam nihil sapiente. Explicabo, natus tenetur et eos odio ipsam adipisci? Dicta iusto dignissimos, voluptatem perferendis maxime culpa beatae eaque nam expedita harum natus? Qui accusamus, necessitatibus, nisi neque voluptate voluptatum quis reiciendis quas aspernatur optio explicabo? Repellendus molestiae in reprehenderit. Architecto unde laborum maiores quasi aliquid?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid vel corporis velit eum dolor cumque ipsam excepturi sit quia sapiente minus dignissimos quae ex assumenda doloremque beatae accusamus atque repellendus optio recusandae neque aspernatur, incidunt mollitia hic? Inventore deleniti laborum quaerat eligendi dolorem laboriosam aliquid placeat, officia neque voluptatum nisi vero ut eos, maiores tempora? Reiciendis quae atque voluptate explicabo, repellendus, fugiat ut tenetur nostrum fugit tempore magni voluptatibus eius laudantium voluptates? Nobis repudiandae, optio enim tempora provident sint consectetur, animi officia quas nesciunt aspernatur, maiores incidunt. Aliquam quasi esse, aperiam ratione, illum quod quibusdam, labore aspernatur qui veritatis inventore!</p>
+
+        <h2 id="about">About Section</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, veritatis voluptatibus quaerat vel et id officiis dolores! Minima voluptatibus maxime dignissimos sunt aut aliquam magni alias, modi, quo, accusamus error amet quibusdam similique neque architecto fugiat quod provident earum maiores quis laudantium aspernatur ipsa! Ducimus sequi facere, illo expedita commodi possimus magni obcaecati, libero minima animi illum saepe vero officiis error rerum mollitia, magnam esse impedit harum qui! A excepturi officiis dolor sapiente, quibusdam voluptas libero saepe ea odio illum?</p>
+
+        <ul>
+            <li>User Account</li>
+            <li>Profile Picture</li>
+            <li>Messages List</li>
+        </ul>
+
+        <h2 id="blogs">Blogs Section</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, veritatis voluptatibus quaerat vel et id officiis dolores! Minima voluptatibus maxime dignissimos sunt aut aliquam magni alias, modi, quo, accusamus error amet quibusdam similique neque architecto fugiat quod provident earum maiores quis laudantium aspernatur ipsa! Ducimus sequi facere, illo expedita commodi possimus magni obcaecati, libero minima animi illum saepe vero officiis error rerum mollitia, magnam esse impedit harum qui! A excepturi officiis dolor sapiente, quibusdam voluptas libero saepe ea odio illum?</p>
+
+        <ul>
+            <li>User Account</li>
+            <li>Profile Picture</li>
+            <li>Messages List</li>
+        </ul>
+
+        <h2 id="gallery">Gallery Section</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, veritatis voluptatibus quaerat vel et id officiis dolores! Minima voluptatibus maxime dignissimos sunt aut aliquam magni alias, modi, quo, accusamus error amet quibusdam similique neque architecto fugiat quod provident earum maiores quis laudantium aspernatur ipsa! Ducimus sequi facere, illo expedita commodi possimus magni obcaecati, libero minima animi illum saepe vero officiis error rerum mollitia, magnam esse impedit harum qui! A excepturi officiis dolor sapiente, quibusdam voluptas libero saepe ea odio illum?</p>
+
+        <ul>
+            <li>User Account</li>
+            <li>Profile Picture</li>
+            <li>Messages List</li>
+        </ul>
+
+        <h2 id="services">Services Section</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, veritatis voluptatibus quaerat vel et id officiis dolores! Minima voluptatibus maxime dignissimos sunt aut aliquam magni alias, modi, quo, accusamus error amet quibusdam similique neque architecto fugiat quod provident earum maiores quis laudantium aspernatur ipsa! Ducimus sequi facere, illo expedita commodi possimus magni obcaecati, libero minima animi illum saepe vero officiis error rerum mollitia, magnam esse impedit harum qui! A excepturi officiis dolor sapiente, quibusdam voluptas libero saepe ea odio illum?</p>
+
+        <ul>
+            <li>User Account</li>
+            <li>Profile Picture</li>
+            <li>Messages List</li>
+        </ul>
+        <center>Subscribe to Jc Tech Newsletter</center>
+
+    </div>
+
+    <!-- jquery -->
+
+    <script src="./jquery.min.js"></script>
+
+    // this code is responsible for the hiding of the of navbar on scroll 
+    <script>
+        let navbar = document.querySelector('nav');
+        let scrollPrevious =  window.pageYOffset;
+
+        window.onscroll = function(){
+            let scrollCurrent = window.pageYOffset;
+
+            if(scrollPrevious > scrollCurrent){
+                navbar.style.top = "0px";
+            } else {
+                navbar.style.top = "-90px";
+            }
+
+            scrollPrevious = scrollCurrent;
+        }
+    </script>
+
+    // this code remove the active class from the previous nav item and adds to the clicked nav item 
+
+    <script>
+
+        $('nav ul li').click(function(){
+            $(this).addClass("active").siblings().removeClass("active")
+        })
+
+     
+
+    </script>
+</body>
+</html>
